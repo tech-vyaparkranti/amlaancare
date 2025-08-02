@@ -1,0 +1,43 @@
+.select_number .spinner {
+    border: 1px solid rgb(var(--gold-color));
+    display: inline-block;
+    box-shadow: var(--box-shadow) rgb(var(--black-color) / 20%);
+}
+.select_number .number_area {
+    float: left;
+    width: 70px;
+    padding: 0;
+    text-align: center;
+    color: rgb(var(--black-color));
+    border: none;
+    background: none;
+    outline: none;
+    pointer-events: none;
+    font: 400 13px/40px var(--font-three);
+}
+
+.select_number span.spinner>.sub, .select_number span.spinner>.add {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: rgb(var(--black-color));
+    background: rgb(var(--gold-color));
+    cursor: pointer;
+    transition: var(--transition);
+    font: 400 24px/40px var(--font-three);
+	margin: 2px;
+}
+
+.select_number span.spinner>.sub:hover,
+.select_number span.spinner>.add:hover {
+	background: rgb(var(--black-color));
+	border-color: rgb(var(--black-color));
+	color: rgb(var(--white-color));
+}
+
+.select_number .number_area::-webkit-inner-spin-button,
+.select_number .number_area::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
