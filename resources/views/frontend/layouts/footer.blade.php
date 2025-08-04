@@ -20,16 +20,16 @@
 <footer class="footer_2">
     <div class="container">
         <div class="row justify-content-between">
-            {{-- <div class="col-xl-2 col-sm-6 col-md-4 col-lg-3">
-                <div class="footer_content"> --}}
+            <div class="col-xl-2 col-sm-6 col-md-4 col-lg-3">
+                <div class="footer_content"> 
                     {{-- <h5>Address</h5> --}}
                     {{-- <h5>Venuses</h5> --}}
-                    {{-- <a class="footer_2_logo" href="{{url('/')}}">
+                    <a class="footer_2_logo" href="{{url('/')}}">
                         <img src="{{asset(@$footerInfo->logo)}}" alt="logo">
-                    </a> --}}
-                    {{-- <p>{{@$footerInfo->address}}</p>
+                    </a>
+                    <p>{{@$footerInfo->address}}</p>
                     <a class="action" href="tell:{{@$footerInfo->phone}}">Contact : {{@$footerInfo->phone}}</a>
-                    <a class="action" href="mailto:{{@$footerInfo->email}}">E-mail ID : {{@$footerInfo->email}}</a>  --}}
+                    <a class="action" href="mailto:{{@$footerInfo->email}}">E-mail ID : {{@$footerInfo->email}}</a>  
                     {{-- <ul class="footer_social">
                         @foreach ($footerSocials as $link)
                         <li><a href="{{$link->url}}"><i class="{{$link->icon}}"></i></a></li>
