@@ -186,10 +186,10 @@
                             </form>
                             <p class="brand_model"><span class="pdp-title">brand :</span> {{$product->brand->name}}</p>
                             <!-- Button that triggers the modal -->
-                            <div class="product-info">
+                            {{-- <div class="product-info">
                                 <button class="know-product-btn" id="openModalBtn">Know Your Product</button>
                                 <button class="tracing-product-btn" id="tracingProductBtn">Tracing of Product</button>
-                            </div>
+                            </div> --}}
 
                             <div id="tracingModal" class="modal">
                                 <div class="modal-content">
