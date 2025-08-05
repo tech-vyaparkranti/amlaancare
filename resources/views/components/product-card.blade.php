@@ -164,9 +164,10 @@
 .quantity-selector {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     margin-bottom: 8px;
     justify-content: center;
+    
 }
 .qty-btn {
     background: #e7f6e7;
