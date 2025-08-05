@@ -1,7 +1,7 @@
+
 @extends('admin.layouts.master')
 
 @section('content')
-    <!-- Main Content -->
     <section class="section">
         <div class="section-header">
             <h1>Product</h1>
@@ -48,11 +48,6 @@
                                             <label for="inputState">Sub Category</label>
                                             <select id="inputState" class="form-control sub-category" name="sub_category">
                                                 <option value="">Select</option>
-                                                {{-- @foreach ($subCategories as $subCategory)
-                                                    <option
-                                                       
-                                                        value="{{ $subCategory->id }}">{{ $subCategory->name }}</option>
-                                                @endforeach --}}
                                             </select>
                                         </div>
                                     </div>
@@ -61,18 +56,12 @@
                                             <label for="inputState">Child Category</label>
                                             <select id="inputState" class="form-control child-category" name="child_category">
                                                 <option value="">Select</option>
-                                                {{-- @foreach ($childCategories as $childCategory)
-                                                <option
-                                                    value="{{ $childCategory->id }}">{{ $childCategory->name }}
-                                                </option>
-                                            @endforeach --}}
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="row">
-                                    
                                     <div class="form-group col-md-6">
                                         <label for="inputState">Brand</label>
                                         <select id="inputState" class="form-control" name="brand">
@@ -84,45 +73,6 @@
                                     </div>
                                 </div>
 
-                                {{-- <div class="form-group">
-                                    <label>Select Product Fonts</label>
-                                    <div class="row">
-                                        @if (!empty($fonts))
-                                            @foreach ($fonts as $item)
-                                                <div class="col-md-2">
-                                                    <label>Font Name : {{ $item->font_name }}</label>
-                                                    <div class="custom-control custom-checkbox image-checkbox border-right">
-                                                        <input type="checkbox" class="custom-control-input" name="product_font[]" id="font_image_{{ $item->id }}" value="{{ $item->id }}">
-                                                        <label class="custom-control-label" for="font_image_{{ $item->id }}">
-                                                            <img src="{{ asset($item->font_sample_image) }}" alt="{{ $item->font_name }}" class="img-fluid w-50">
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        @endif
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Select Product Color Samples</label>
-                                    <div class="row">
-                                        @if (!empty($colours))
-                                            @foreach ($colours as $item)
-                                                <div class="col-md-2">
-                                                    <label>Colour Name : {{ $item->colour_name }}</label>
-                                                    <div class="custom-control custom-checkbox image-checkbox border-right">
-                                                        <input type="checkbox" class="custom-control-input" name="product_colour[]" id="colour_image_{{ $item->id }}" value="{{ $item->id }}">
-                                                        <label class="custom-control-label" for="colour_image_{{ $item->id }}">
-                                                            <img src="{{ asset($item->colour_sample_image) }}" alt="{{ $item->colour_name }}" class="img-fluid w-50">
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            @endforeach
-                                        @endif
-                                    </div>
-                                </div> --}}
-
-                                <!-- New Fields: Length, Breadth, Height, Weight, HSN Code -->
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label>Length (cm)</label>
@@ -145,17 +95,12 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                <div class="form-group col-md-6">
-                                    <label>HSN Code</label>
-                                    <input type="text" class="form-control" name="hsn_code" value="{{ old('hsn_code') }}">
+                                    <div class="form-group col-md-6">
+                                        <label>HSN Code</label>
+                                        <input type="text" class="form-control" name="hsn_code" value="{{ old('hsn_code') }}">
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label>Product Certificate (PDF)</label>
-                                    <input type="file" class="form-control" name="product_certificate" accept="application/pdf">
-                                </div>
-                            </div>
 
-                                <!-- Rest of the existing fields -->
                                 <div class="form-group">
                                     <label>SKU</label>
                                     <input type="text" class="form-control" name="sku" value="{{ old('sku') }}">
@@ -211,9 +156,6 @@
                                     <select id="inputState" class="form-control" name="product_type">
                                         <option value="">Select</option>
                                         <option {{ old('product_type') == 'new_arrival' ? 'selected' : '' }} value="new_arrival">New Arrival</option>
-                                        {{-- <option {{ old('product_type') == 'featured_product' ? 'selected' : '' }} value="featured_product">Featured</option>
-                                        <option {{ old('product_type') == 'top_product' ? 'selected' : '' }} value="top_product">Top Product</option>
-                                        <option {{ old('product_type') == 'best_product' ? 'selected' : '' }} value="best_product">Best Product</option> --}}
                                         <option {{ old('product_type') == 'latest_product' ? 'selected' : '' }} value="latest_product">Latest Product</option>
                                         <option {{ old('product_type') == 'best_seller_product' ? 'selected' : '' }} value="best_seller_product">Best Seller Product</option>
                                     </select>
@@ -235,12 +177,6 @@
                                         <option {{ old('status') == '1' ? 'selected' : '' }} value="1">Active</option>
                                         <option {{ old('status') == '0' ? 'selected' : '' }} value="0">Inactive</option>
                                     </select>
-                                </div>
-                                <div class="form-group">
-                                    <label>Tracing location From</label>
-                                    <input type="text" class="form-control" name="from_address" value="{{ old('from_address') }}" required>
-                                    <label>Tracing location To</label>
-                                    <input type="text" class="form-control" name="to_address" value="{{ old('to_address') }}" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary common_btn">Create</button>
                             </form>
@@ -304,6 +240,4 @@
             });
         });
     </script>
-
-
 @endpush
