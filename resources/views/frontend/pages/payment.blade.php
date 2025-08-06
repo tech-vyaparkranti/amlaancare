@@ -37,13 +37,13 @@
                                 @endif
 
                                 @if (!empty($razorpay_settings))
-                                    @include('frontend.pages.payment-gateway.integrations.razorpay')
+                                    @include('frontend.pages.payment-gateway.razorpay')
                                 @endif
-                                @if (!empty($stripe_settings))
+                                {{-- @if (!empty($stripe_settings))
                                     <button class="nav-link common_btn" id="v-pills-profile-tab" data-bs-toggle="pill"
                                         data-bs-target="#v-pills-stripe" type="button" role="tab" aria-controls="v-pills-stripe"
                                         aria-selected="false">Stripe</button>
-                                @endif
+                                @endif --}}
 
                                 @if (!empty($cashFree))
                                     <button class="nav-link common_btn" onclick="window.location.href='{{ route('user.cashfree.startPayment') }}'; return false;">CashFree</button>
@@ -71,9 +71,9 @@
                                 </div>
                             </div>
 
-                            @include('frontend.pages.payment-gateway.stripe')
+                            {{-- @include('frontend.pages.payment-gateway.stripe') --}}
 
-                            <!-- @include('frontend.pages.payment-gateway.razorpay') -->
+                             @include('frontend.pages.payment-gateway.razorpay') 
 
                             <!-- @include('frontend.pages.payment-gateway.cod') -->
 
@@ -109,13 +109,13 @@
 
                                     @if (!empty($razorpay_settings))
                                         <p>razorpay_settings</p>
-                                        @include('frontend.pages.payment-gateway.integrations.razorpay')
+                                        @include('frontend.pages.payment-gateway.razorpay')
                                     @endif
 
-                                    @if (!empty($stripe_settings))
+                                    {{-- @if (!empty($stripe_settings))
                                         <p>stripe_settings</p>
                                         @include('frontend.pages.payment-gateway.integrations.stripe')
-                                    @endif
+                                    @endif --}}
 
                                     @if (!empty($cashFree))
                                         <p>cashFree</p>

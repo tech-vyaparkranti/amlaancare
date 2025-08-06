@@ -160,6 +160,19 @@ p {
     border-color: rgb(var(--color-gold));
 }
 
+
+.pay_info_area .nav-pills .nav-link {
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    background: orange;
+    border-radius: 30px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .add_cart {
     text-transform: uppercase;
     font-size: 12px;
@@ -5650,12 +5663,24 @@ th {
     border: 2px solid rgba(var(--color-gold), 0.8);
 }
 
+.pay_info_area .nav-pills .nav-link {
+    margin-bottom: 12px !important;
+    padding: 15px 20px !important;
+    background: orange !important;
+    border-radius: 30px !important;
+    color: white !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease-in-out !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
 
 .payment_menu {
-    padding: 15px;
-    background: #fff;
-    box-shadow: rgb(50 50 93 / 15%) 0px 0px 5px 0px;
-    border-radius: 5px;
+    padding: 15px !important;
+    background: #fff !important;
+    box-shadow: rgb(50 50 93 / 15%) 0px 0px 5px 0px !important;
+    border-radius: 5px !important;
 }
 
 /* .payment_menu .nav-pills button:last-child {
