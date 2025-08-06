@@ -1642,9 +1642,9 @@ header {
     border: 1px solid rgb(var(--color-black) / 20%);
 }
 
-.minus,
+
 .new {
-    /* position: absolute; */
+    position: absolute;
     height: 25px;
     text-align: center;
     line-height: 25px;
@@ -1655,6 +1655,20 @@ header {
     border-radius: 0px;
     z-index: 1;
     padding: 0px 10px;
+}
+
+.minus {
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    top: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 0px;
+    z-index: 1;
+    padding: 0px 10px;
+
 }
 
 .new {

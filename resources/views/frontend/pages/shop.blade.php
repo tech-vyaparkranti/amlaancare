@@ -415,7 +415,7 @@
                     <div class="product_item" style="transition: transform 0.3s ease-in-out;">
                         <!-- Tag Indicator -->
                         @if (strpos($product->tags, 'new') !== false)
-                            <span class="new">New</span>
+                            <span class="new " style="">New</span>
                         @endif
 
                         <!-- Product Link & Images -->

@@ -71,7 +71,7 @@
                                             value="{{$method->id}}" data-id="{{$method->cost}}">
                                         <label class="form-check-label" for="exampleRadios1">
                                             {{$method->name}}
-                                            <span>cost: ({{$settings->currency_icon ?? ''}}{{$method->cost}})</span>
+                                            <span>cost: ({{$settings->currency_icon ?? '₹'}}{{$method->cost}})</span>
                                         </label>
                                     </div>
                                 @elseif ($method->type === 'flat_cost')
@@ -80,15 +80,15 @@
                                             value="{{$method->id}}" data-id="{{$method->cost}}">
                                         <label class="form-check-label" for="exampleRadios1">
                                             {{$method->name}}
-                                            <span>cost: ({{$settings->currency_icon ?? ''}}{{$method->cost}})</span>
+                                            <span>cost: ({{$settings->currency_icon ?? '₹'}}{{$method->cost}})</span>
                                         </label>
                                     </div>
                                 @endif
                             @endforeach --}}
 
                             <div class="order_details_summery">
-                                <p>subtotal: <span>{{$settings->currency_icon ?? ''}}{{getCartTotal()}}</span></p>
-                                <p>shipping fee(+): <span id="shipping_fee">{{$settings->currency_icon ?? ''}}0</span></p>
+                                <p>subtotal: <span>{{$settings->currency_icon ?? '₹'}}{{getCartTotal()}}</span></p>
+                                <p>shipping fee(+): <span id="shipping_fee">{{$settings->currency_icon ?? '₹'}}0</span></p>
                                 <p>coupon(-): <span>{{$settings->currency_icon ?? ''}}{{getCartDiscount()}}</span></p>
                                 <p><b>total:</b> <span><b id="total_amount" data-id="{{getMainCartTotal()}}">{{$settings->currency_icon ?? ''}}{{getMainCartTotal()}}</b></span></p>
                             </div>
@@ -217,9 +217,9 @@
             let totalAmount = currentTotalAmount + shippingFee;
 
             $('#shipping_method_id').val($(this).val());
-            $('#shipping_fee').text("{{$settings->currency_icon ?? ''}}"+shippingFee);
+            $('#shipping_fee').text("{{$settings->currency_icon ?? '₹'}}"+shippingFee);
 
-            $('#total_amount').text("{{$settings->currency_icon ?? ''}}"+totalAmount)
+            $('#total_amount').text("{{$settings->currency_icon ?? '₹'}}"+totalAmount)
         })
 
         $('.shipping_address').on('click', function(){
@@ -288,8 +288,8 @@
             let currentTotalAmount = $('#total_amount').data('id');
             let totalAmount = currentTotalAmount + shippingFee;
 
-            $('#shipping_fee').text("{{ $settings->currency_icon }}" + shippingFee);
-            $('#total_amount').text("{{ $settings->currency_icon }}" + totalAmount);
+            $('#shipping_fee').text("{{ $settings->currency_icon??'₹' }}" + shippingFee);
+            $('#total_amount').text("{{ $settings->currency_icon ?? '₹'}}" + totalAmount);
         });
 
         $('.shipping_address').on('click', function() {

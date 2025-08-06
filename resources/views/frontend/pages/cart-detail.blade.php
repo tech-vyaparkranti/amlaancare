@@ -848,7 +848,7 @@
                             <div class="item-name">{!! $item->name !!}</div>
 
                             <div class="item-price">
-                                {{$settings->currency_icon}}{{$item->price}}
+                                {{$settings->currency_icon ?? '₹'}}{{$item->price}}
                                 @if($item->options->variants_total > 0)
                                     <span class="original-price">{{$settings->currency_icon}}{{$item->price + $item->options->variants_total}}</span>
                                 @endif
