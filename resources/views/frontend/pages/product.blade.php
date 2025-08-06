@@ -84,7 +84,7 @@
         <div class="container-fluid">
             <ul class="m-0 p-0">
                 <!-- Home Link -->
-                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('shop') }}">Home</a></li>
 
                 <!-- Products Link -->
                 <li><a href="{{ route('products.index') }}">Products</a></li>

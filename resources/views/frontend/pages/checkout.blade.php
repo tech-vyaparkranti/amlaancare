@@ -11,7 +11,7 @@
     <div class="breadcrumb">
         <div class="container-fluid">
             <ul class="m-0 p-0">
-                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('shop') }}">Home</a></li>
                 <li><a href="javascript:;">check out</a></li>
             </ul>
         </div>

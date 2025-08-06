@@ -15,7 +15,7 @@ aria-labelledby="v-pills-home-tab">
 
                         data-key="{{$razorpaySetting->razorpay_key}}"
                         data-amount="{{$payableAmount * 100}}"
-                        data-buttontext="Pay With Razorpay"
+                        {{-- data-buttontext="Pay With Razorpay" --}}
                         data-name="payment"
                         data-description="Payment for product"
                         data-prefill.name="{{Auth::user()->name}}"
