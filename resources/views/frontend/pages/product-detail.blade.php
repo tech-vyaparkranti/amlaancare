@@ -1219,7 +1219,7 @@ const productLocation = { lat: 30.946820, lng: 75.842359 };
         color: #137333; /* darker green text */
         font-weight: 600;
         border: none;
-        padding: 12px 20px;
+        padding: 12px 10px;
         border-radius: 24px;
         display: flex;
         align-items: center;
