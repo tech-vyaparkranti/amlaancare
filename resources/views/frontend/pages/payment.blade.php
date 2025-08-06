@@ -4,7 +4,7 @@
     {{$settings->site_name ?? ""}} || Payment
 @endsection --}}
 
-@section('title', 'cliquehop.com')
+@section('title', 'amlaancare.com')
 
 
 @section('content')
@@ -12,7 +12,7 @@
     <div class="breadcrumb">
         <div class="container-fluid">
             <ul class="m-0 p-0">
-                <li><a href="{{ route('home') }}">Home</a></li>
+                <li><a href="{{ route('shop') }}">Home</a></li>
                 <li><a href="javascript:;">payment</a></li>
             </ul>
         </div>
@@ -36,9 +36,11 @@
                                     </div>
                                 @endif
 
-                                @if (!empty($razorpay_settings))
-                                    @include('frontend.pages.payment-gateway.razorpay')
-                                @endif
+                               @if (!empty($razorpay_settings))
+<button class="nav-link common_btn" id="v-pills-razorpay-tab" data-bs-toggle="pill"
+    data-bs-target="#v-pills-razorpay" type="button" role="tab"
+    aria-controls="v-pills-razorpay" aria-selected="false">Razorpay</button>                                
+    @endif
                                 {{-- @if (!empty($stripe_settings))
                                     <button class="nav-link common_btn" id="v-pills-profile-tab" data-bs-toggle="pill"
                                         data-bs-target="#v-pills-stripe" type="button" role="tab" aria-controls="v-pills-stripe"
